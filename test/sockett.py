@@ -8,17 +8,15 @@ import socket
 
 
 def main():
-    try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect(('127.0.0.1', 1717))
-        while 1:
-            a = s.recv(4096)
-            if a:
-                print a
-            else:
-                print 'wait...'
-    except:
-        print 'error'
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(('127.0.0.1', 1717))
+    s.send('1024')
+    while 1:
+        a = s.recv(1024)
+        if a:
+            print a
+        else:
+            print 'wait...'
 
 
 if __name__ == '__main__':
