@@ -57,8 +57,8 @@ INFO: (jni/minicap/minicap.cpp:585) ===E===
 ```
 ## 但是检查缺没有那个进程  这是为啥
 ```
-PS D:\minicap\adb> .\adb.exe shell ps -ef|grep 4315
-PS D:\minicap\adb> .\adb.exe shell ps -ef|grep mini
+PS D:\minicap\adb> .\adb.exe shell ps |grep 4315
+PS D:\minicap\adb> .\adb.exe shell ps |grep mini
 ```
 ### 端口转发
 ```
